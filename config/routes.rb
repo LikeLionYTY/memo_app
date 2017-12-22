@@ -5,4 +5,12 @@ Rails.application.routes.draw do
 
   get '/help' => 'hello#help'
 
+  get '/posts/new' => 'posts#new'
+
+  get '/posts/edit' => 'posts#edit'
+
+  get '/posts/index' => 'posts#index'
+
+  get '/posts/show' => 'posts#show'
+
 end
