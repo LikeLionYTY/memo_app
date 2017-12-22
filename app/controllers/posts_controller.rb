@@ -17,12 +17,12 @@ class PostsController < ApplicationController
 # Read
   ## 사용자에게 글 목록을 보여주는 화면
   def index
-
+    @posts = Post.all
   end
 
   ## 사용자가 글을 보는 화면
   def show
-
+    @post = Post.find params['id']
   end
 
 # Update

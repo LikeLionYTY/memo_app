@@ -1,0 +1,19 @@
+<h1>Hack Your Post</h1>
+
+<div class="table-responsive">
+  <table class="table table-fit">
+    <thead>
+      <tr>
+        <th>title</th>
+        <th>content</th>
+      </tr>
+    </thead>
+    <% @posts.each do |post| %>
+      <tbody>
+        <td><%= link_to(post.title, post_path(post)) %></td>
+        <td><%= post.content %></td>
+      </tbody>
+    <% end %>
+  </table>
+</div>
+

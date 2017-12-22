@@ -5,14 +5,16 @@ Rails.application.routes.draw do
 
   get '/help' => 'hello#help'
 
-  get '/posts/new' => 'posts#new'
+  # get '/posts/new' => 'posts#new'
+  #
+  # post '/posts' => 'posts#create'
+  #
+  # get '/posts/edit' => 'posts#edit'
+  #
+  # get '/posts' => 'posts#index'
+  #
+  # get '/posts/:id' => 'posts#show'
 
-  post '/posts' => 'posts#create'
-
-  get '/posts/edit' => 'posts#edit'
-
-  get '/posts/index' => 'posts#index'
-
-  get '/posts/show' => 'posts#show'
+  resources :posts
 
 end
