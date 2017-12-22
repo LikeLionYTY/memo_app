@@ -1,21 +1,36 @@
 class PostsController < ApplicationController
-  #1. 사용자가 글을 작성하는 화면
+# Create
+  ## 사용자가 글을 작성하는 화면
   def new
-
+    @post = Post.new
   end
 
-  #2. 사용자에게 글 목록을 보여주는 화면
+  def create
+    # params['post']
+    @post = Post.new
+    @post.title = params['post']['title']
+    @post.content = params['post']['content']
+    @post.save
+    render html: '저장 완료'
+  end
+
+# Read
+  ## 사용자에게 글 목록을 보여주는 화면
   def index
 
   end
 
-  #3. 사용자가 글을 수정하는 화면
+  ## 사용자가 글을 보는 화면
+  def show
+
+  end
+
+# Update
+  ## 사용자가 글을 수정하는 화면
   def edit
 
   end
 
-  #4. 사용자가 글을 보는 화면
-  def show
-    # 나랑 이름이같은 뷰파일을 보여줘라
-  end
+# Destroy
+
 end
