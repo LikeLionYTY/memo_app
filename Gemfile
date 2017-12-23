@@ -9,6 +9,10 @@ gem 'bootstrap_form'
 
 gem 'tinymce-rails'
 
+gem 'local_time'
+
+gem 'kaminari'
+gem 'rails-i18n'
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.4'
@@ -43,6 +47,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rails_db'
+  gem 'faker'
 end
 
 group :development do

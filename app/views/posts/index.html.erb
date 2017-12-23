@@ -5,15 +5,19 @@
     <thead>
       <tr>
         <th>title</th>
-        <th>content</th>
+        <th>created_at</th>
       </tr>
     </thead>
     <% @posts.each do |post| %>
       <tbody>
         <td><%= link_to(post.title, post_path(post)) %></td>
-        <td><%= post.content %></td>
+        <td>
+          <%= icon 'time' %>
+          <%= local_time(post.created_at) %>
+        </td>
       </tbody>
     <% end %>
   </table>
+  <%= paginate @posts %>
 </div>
 
